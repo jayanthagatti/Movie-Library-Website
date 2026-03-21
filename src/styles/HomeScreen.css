@@ -1,0 +1,125 @@
+/* ─────────────────────────────────────────────────────────────────
+   HomeScreen.css — LIGHT THEME
+   File: src/styles/HomeScreen.css
+   ───────────────────────────────────────────────────────────────── */
+
+/* .home-page {
+  min-height: 100vh;
+  background: #f4f5f7;
+  color: #1a1a2e;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Toast notification ──────────────────────────────────────── */
+/*.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #1a1a2e;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 999;
+  pointer-events: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  animation: toast-in 0.3s ease;
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+} */
+
+
+.home-page {
+  min-height: 100vh;
+  background: #f4f5f7;
+  color: #1a1a2e;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+ 
+/* ── Welcome banner ──────────────────────────────────────────── */
+.home-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+}
+.home-welcome__left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.home-welcome__wave {
+  font-size: 28px;
+}
+.home-welcome__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 2px;
+}
+.home-welcome__title span {
+  color: #e63946;
+}
+.home-welcome__sub {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+ 
+/* Edit Name button */
+.home-welcome__edit-btn {
+  padding: 8px 18px;
+  background: #f4f5f7;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.home-welcome__edit-btn:hover {
+  background: #fff0f1;
+  border-color: #e63946;
+  color: #e63946;
+}
+ 
+/* ── Toast notification ──────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a2e;
+  border: 1px solid #2a2a38;
+  color: #f0f0f0;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 999;
+  pointer-events: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: toast-in 0.3s ease;
+  white-space: nowrap;
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+ 
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .home-welcome { padding: 14px 16px; flex-direction: column; gap: 12px; align-items: flex-start; }
+  .home-welcome__edit-btn { width: 100%; text-align: center; }
+}

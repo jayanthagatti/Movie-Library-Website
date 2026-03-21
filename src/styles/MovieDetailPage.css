@@ -1,0 +1,277 @@
+/* ─────────────────────────────────────────────────────────────────
+   MovieDetailPage.css — LIGHT THEME
+   File: src/styles/MovieDetailPage.css
+   ───────────────────────────────────────────────────────────────── */
+
+/* ── Page shell ─────────────────────────────────────────────── */
+.mdp {
+  min-height: 100vh;
+  background: #f4f5f7;
+  color: #1a1a2e;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  padding: 0 0 60px;
+}
+
+/* ── Top bar ─────────────────────────────────────────────────── */
+.mdp-topbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 14px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.mdp-back-btn {
+  background: none;
+  border: 1.5px solid #ddd;
+  color: #555;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.mdp-back-btn:hover {
+  background: #f0f0f0;
+  color: #1a1a2e;
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+.mdp-hero {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  padding: 40px 40px 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* Poster */
+.mdp-poster-wrap {
+  flex: 0 0 260px;
+}
+.mdp-poster {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Info panel */
+.mdp-info { flex: 1; min-width: 0; }
+
+/* Badges */
+.mdp-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.mdp-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.mdp-badge--rated  { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
+.mdp-badge--type   { background: #e8f0fe; color: #1a73e8; border: 1px solid #c5d8fb; }
+.mdp-badge--watched { background: #e6f9f0; color: #1e8a55; border: 1px solid #b2dfcb; }
+
+/* Title */
+.mdp-title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #1a1a2e;
+  margin: 0 0 10px;
+}
+
+/* Meta row */
+.mdp-meta {
+  font-size: 14px;
+  color: #888;
+  margin: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+.mdp-sep { margin: 0 4px; color: #ccc; }
+
+/* Ratings pills */
+.mdp-ratings {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.mdp-rating-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 10px 16px;
+  min-width: 90px;
+}
+.mdp-rating-pill__emoji { font-size: 22px; }
+.mdp-rating-pill div    { display: flex; flex-direction: column; }
+.mdp-rating-pill strong { font-size: 16px; color: #1a1a2e; line-height: 1.2; }
+.mdp-rating-pill small  { font-size: 10px; color: #999; }
+
+/* Plot */
+.mdp-plot {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.75;
+  margin: 0 0 28px;
+  max-width: 640px;
+}
+
+/* Buttons */
+.mdp-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.mdp-btn {
+  padding: 11px 22px;
+  border-radius: 7px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.mdp-btn:hover { transform: scale(1.02); }
+
+.mdp-btn--play {
+  background: #e63946;
+  color: #fff;
+}
+.mdp-btn--play:hover { background: #c1121f; }
+
+.mdp-btn--watchlist {
+  background: #1a1a2e;
+  color: #fff;
+}
+.mdp-btn--watchlist:hover { background: #2d2d4a; }
+
+.mdp-btn--remove {
+  background: #fff0f1;
+  color: #e63946;
+  border: 1.5px solid #f5c0c3;
+}
+.mdp-btn--remove:hover { background: #ffe0e2; }
+
+.mdp-btn--watched {
+  background: #e6f9f0;
+  color: #1e8a55;
+  border: 1.5px solid #b2dfcb;
+}
+.mdp-btn--watched:hover { background: #ccf0df; }
+
+/* ── Details section ─────────────────────────────────────────── */
+.mdp-details {
+  padding: 36px 40px;
+}
+.mdp-details__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 20px;
+}
+
+/* Details grid */
+.mdp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.mdp-grid__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+}
+.mdp-grid__item--full { grid-column: 1 / -1; }
+.mdp-grid__label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.mdp-grid__value {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ── Loading ─────────────────────────────────────────────────── */
+.mdp-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f4f5f7;
+  color: #888;
+  gap: 16px;
+  font-size: 15px;
+}
+.mdp-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e0e0e0;
+  border-top-color: #e63946;
+  border-radius: 50%;
+  animation: mdp-spin 0.8s linear infinite;
+}
+@keyframes mdp-spin { to { transform: rotate(360deg); } }
+
+/* ── Error ───────────────────────────────────────────────────── */
+.mdp-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f4f5f7;
+  gap: 12px;
+  text-align: center;
+  padding: 40px;
+}
+.mdp-error span { font-size: 48px; }
+.mdp-error h2   { color: #1a1a2e; margin: 0; }
+.mdp-error p    { color: #888; font-size: 14px; }
+.mdp-error button {
+  padding: 10px 20px;
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .mdp-hero     { flex-direction: column; padding: 24px 20px; gap: 24px; }
+  .mdp-poster-wrap { flex: none; width: 100%; max-width: 260px; margin: 0 auto; }
+  .mdp-title    { font-size: 26px; }
+  .mdp-actions  { flex-direction: column; }
+  .mdp-btn      { width: 100%; text-align: center; }
+  .mdp-details  { padding: 24px 20px; }
+  .mdp-topbar   { padding: 12px 20px; }
+}

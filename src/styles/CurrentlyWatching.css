@@ -1,0 +1,122 @@
+/* ─────────────────────────────────────────────────────────────────
+   CurrentlyWatching.css — LIGHT THEME
+   File: src/styles/CurrentlyWatching.css
+   ───────────────────────────────────────────────────────────────── */
+
+.cw-section {
+  padding: 36px 40px 20px;
+}
+.cw-section__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cw-section__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cw-section__badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 20px;
+  background: #e63946;
+  color: #fff;
+}
+
+/* ── Empty state ─────────────────────────────────────────────── */
+.cw-empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: #aaa;
+  border: 1.5px dashed #ddd;
+  border-radius: 12px;
+  background: #fff;
+}
+.cw-empty__icon  { font-size: 42px; display: block; margin-bottom: 12px; }
+.cw-empty__title { font-size: 15px; font-weight: 600; color: #888; margin: 0 0 6px; }
+.cw-empty__sub   { font-size: 13px; margin: 0; color: #aaa; }
+
+/* ── Horizontal scroll row ───────────────────────────────────── */
+.cw-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd transparent;
+}
+.cw-row::-webkit-scrollbar       { height: 5px; }
+.cw-row::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+
+/* ── Card ────────────────────────────────────────────────────── */
+.wc-card {
+  flex: 0 0 160px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1.5px solid #e8e8e8;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.wc-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #ccc;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.wc-card__poster-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+.wc-card__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.wc-card:hover .wc-card__poster { transform: scale(1.05); }
+
+.wc-card__progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.08);
+}
+.wc-card__progress-fill {
+  height: 100%;
+  background: #e63946;
+  border-radius: 0 2px 2px 0;
+  transition: width 0.3s;
+}
+
+.wc-card__info    { padding: 10px 12px 14px; }
+.wc-card__title   { font-size: 13px; font-weight: 700; color: #1a1a2e; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wc-card__meta    { font-size: 11px; color: #999; }
+.wc-card__progress-text { font-size: 11px; color: #e63946; font-weight: 600; margin-top: 4px; }
+
+.wc-card__actions { display: flex; gap: 6px; margin-top: 10px; }
+.wc-card__btn {
+  flex: 1;
+  padding: 6px 0;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.wc-card__btn--continue { background: #e63946; color: #fff; }
+.wc-card__btn--continue:hover { background: #c1121f; }
+.wc-card__btn--remove { background: rgba(230,57,70,0.08); color: #e63946; border: 1px solid rgba(230,57,70,0.2); }
+.wc-card__btn--remove:hover { background: rgba(230,57,70,0.18); }
