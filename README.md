@@ -55,12 +55,12 @@ After the first run, the app works fully offline
 
 
 1. Clone the Repository
-bashgit clone https://github.com/yourusername/ciniscope.git
+bashgit clone https://github.com/jayanthagatti/Movie-Library-Website
 cd ciniscope
 
 2. Create React App with Vite (if starting from scratch)
 If you are setting up the project from scratch, create a new React app using Vite:
-bashnpm create vite@latest ciniscope -- --template react
+bash: npm create vite@latest ciniscope -- --template react
 cd ciniscope
 
 3. Install All Dependencies
